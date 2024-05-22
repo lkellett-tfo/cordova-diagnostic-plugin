@@ -186,9 +186,9 @@ var Diagnostic_Notifications = (function(){
     /**
      * Switches to the notifications page in the Settings app
      */
-    Diagnostic_Notifications.switchToNotificationSettings = function() {
-        return cordova.exec(null,
-            null,
+    Diagnostic_Notifications.switchToNotificationSettings = function(successCallback, errorCallback) {
+        return cordova.exec(successCallback,
+            errorCallback,
             'Diagnostic_Notifications',
             'switchToNotificationSettings',
             []);
